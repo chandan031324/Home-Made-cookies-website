@@ -1,0 +1,483 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f3e9;
+    color: #333;
+    padding-bottom: 50px;
+}
+
+h1, h2, h3, h4 {
+    color: #c49a6c;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #c49a6c;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+    text-decoration:#f0a500;
+}
+
+#user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#menu-toggle {
+    display: none;
+    
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #c49a6c;
+    padding: 10px;
+   
+}
+
+#mobile-menu a {
+    color: #fff;
+    padding: 5px 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#mobile-menu.active {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    #menu-toggle {
+        display: inline-block;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    nav {
+        display: none;
+    }
+}
+
+/* Hero Banner */
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background: url('images/banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.hero-banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #c49a6c;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero-banner button:hover {
+    background-color: #c49a6c;
+    color: #fff;
+}
+
+/* Form Styling (Login/Register) */
+form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c49a6c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a97c53;
+}
+
+/* Product List and Detail Page */
+#product-list, .admin-products, #cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product, .admin-product, .cart-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h4 {
+    margin: 10px 0;
+}
+
+.cart-item {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item button {
+    padding: 5px 10px;
+}
+/* Product List Section */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h4 {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.product p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.product button {
+    background-color: #c49a6c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #a97c53;
+}
+
+/* Responsive Design for Products */
+@media (max-width: 768px) {
+    .product {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 90%;
+    }
+}
+
+/* Cart and Checkout */
+#cart-badge {
+    background-color: #c49a6c;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.checkout-summary {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.checkout-summary h3 {
+    margin-bottom: 10px;
+}
+
+.checkout-summary button {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Admin Dashboard */
+.admin-products {
+    padding: 20px;
+}
+#btn{
+    margin-top: 5%;
+}
+
+.admin-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-product button {
+    margin-top: 5px;
+}
+
+/* Contact Page */
+.contact-form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Footer */
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-container > div {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+    padding: 10px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-about p,
+.footer-contact p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    text-decoration:none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: #f0a500;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .social-icons a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social .social-icons img {
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+/* Miscellaneous */
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+/* Checkout Page Styling */
+#checkout-page {
+    padding: 20px;
+}
+
+#cart-summary {
+    margin-bottom: 20px;
+    
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+#billing-details form {
+    display: flex;
+    flex-direction: column;
+}
+
+#billing-details label {
+    margin-top: 10px;
+}
+
+#billing-details input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#billing-details button {
+    background-color: #c49a6c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#billing-details button:hover {
+    background-color: #a97c53;
+}
+
